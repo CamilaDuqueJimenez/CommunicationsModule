@@ -1,11 +1,11 @@
 ﻿namespace DomoNow.Communications.Application.Services
 {
-    public interface IUnitOfWork : IDisposable
+    public interface IUnitOfWork : IAsyncDisposable
     {
 
-        Task BeginTransactionAsync(CancellationToken pCancellationToken = default);
-        Task CommitTransactionAsync(CancellationToken pCancellationToken = default);
-        Task RollbackTransactionAsync(CancellationToken pCancellationToken = default);
-        Task SaveChangesAsync(CancellationToken pCancellationToken = default);
+        Task BeginTransaction(CancellationToken cancellationToken = default);
+        Task CommitTransaction(CancellationToken cancellationToken = default);
+        Task RollbackTransaction(CancellationToken cancellationToken = default);
+        Task<int> SaveChanges(CancellationToken cancellationToken = default);
     }
 }

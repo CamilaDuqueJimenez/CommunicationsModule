@@ -2,9 +2,10 @@
 
 namespace DomoNow.Communications.Application.Repositories
 {
-    public interface IUserRepository
+    public interface IAuthRepository
     {
         Task<User?> GetById(Guid Id);
+        Task<User?> GetByEmail(string email);
         Task Update(User user);
         Task DeleteById(Guid Id);
         Task<IReadOnlyList<User>> GetAll();

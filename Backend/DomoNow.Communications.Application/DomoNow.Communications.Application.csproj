@@ -11,17 +11,43 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="AutoMapper" Version="15.0.1" />
+    <PackageReference Include="AutoMapper" Version="15.1.0" />
     <PackageReference Include="FluentValidation" Version="12.0.0" />
     <PackageReference Include="FluentValidation.DependencyInjectionExtensions" Version="12.0.0" />
-    <PackageReference Include="MediatR" Version="13.0.0" />
-    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="9.0.8" />
+    <PackageReference Include="MediatR" Version="13.1.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Http.Features" Version="5.0.17" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="9.0.10" />
   </ItemGroup>
 
   <ItemGroup>
     <Folder Include="Interfaces\" />
-    <Folder Include="UseCases\User\Commands\" />
-    <Folder Include="UseCases\User\Queries\Validatios\" />
+    <Folder Include="UseCases\Announcement\Queries\Handlers\" />
+    <Folder Include="UseCases\Announcement\Queries\Validations\" />
+    <Folder Include="UseCases\Apartment\Commands\Handlers\" />
+    <Folder Include="UseCases\Apartment\Commands\Validations\" />
+    <Folder Include="UseCases\Apartment\Dtos\" />
+    <Folder Include="UseCases\Apartment\Queries\Handlers\" />
+    <Folder Include="UseCases\Apartment\Queries\Validations\" />
+    <Folder Include="UseCases\Attachment\Commands\Handlers\" />
+    <Folder Include="UseCases\Attachment\Commands\Validations\" />
+    <Folder Include="UseCases\Attachment\Dtos\" />
+    <Folder Include="UseCases\Attachment\Queries\Handlers\" />
+    <Folder Include="UseCases\Attachment\Queries\Validations\" />
+    <Folder Include="UseCases\ReadConfirmation\Commands\Handlers\" />
+    <Folder Include="UseCases\ReadConfirmation\Commands\Validations\" />
+    <Folder Include="UseCases\ReadConfirmation\Dtos\" />
+    <Folder Include="UseCases\ReadConfirmation\Queries\Handlers\" />
+    <Folder Include="UseCases\ReadConfirmation\Queries\Validations\" />
+    <Folder Include="UseCases\Role\Dtos\" />
+    <Folder Include="UseCases\Role\Queries\Validations\" />
+    <Folder Include="UseCases\Tower\Commands\Handlers\" />
+    <Folder Include="UseCases\Tower\Commands\Validations\" />
+    <Folder Include="UseCases\Tower\Dtos\" />
+    <Folder Include="UseCases\Tower\Queries\Handlers\" />
+    <Folder Include="UseCases\Tower\Queries\Validations\" />
+    <Folder Include="UseCases\User\Dtos\" />
+    <Folder Include="UseCases\User\Queries\Handlers\" />
+    <Folder Include="UseCases\User\Queries\Validations\" />
   </ItemGroup>
 
 </Project>

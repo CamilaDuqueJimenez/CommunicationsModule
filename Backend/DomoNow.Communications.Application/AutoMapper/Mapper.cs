@@ -1,5 +1,4 @@
 ﻿using AutoMapper;
-using DomoNow.Communications.Application.Dtos;
 using DomoNow.Communications.Domain.Entities;
 
 namespace DomoNow.Communications.Application.AutoMapper
@@ -8,7 +7,6 @@ namespace DomoNow.Communications.Application.AutoMapper
     {
         public Mapper()
         {
-            CreateMap<UserDto, User>().ReverseMap();
         }
     }
 }
