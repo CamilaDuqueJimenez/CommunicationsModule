@@ -21,7 +21,6 @@
 
   <ItemGroup>
     <Folder Include="Interfaces\" />
-    <Folder Include="UseCases\Announcement\Queries\Handlers\" />
     <Folder Include="UseCases\Announcement\Queries\Validations\" />
     <Folder Include="UseCases\Apartment\Commands\Handlers\" />
     <Folder Include="UseCases\Apartment\Commands\Validations\" />
@@ -33,7 +32,6 @@
     <Folder Include="UseCases\Attachment\Dtos\" />
     <Folder Include="UseCases\Attachment\Queries\Handlers\" />
     <Folder Include="UseCases\Attachment\Queries\Validations\" />
-    <Folder Include="UseCases\ReadConfirmation\Commands\Handlers\" />
     <Folder Include="UseCases\ReadConfirmation\Commands\Validations\" />
     <Folder Include="UseCases\ReadConfirmation\Dtos\" />
     <Folder Include="UseCases\ReadConfirmation\Queries\Handlers\" />

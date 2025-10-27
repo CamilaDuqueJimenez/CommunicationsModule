@@ -53,5 +53,17 @@ namespace DomoNow.Communications.Domain.Entities
             UpdatedAt = DateTime.UtcNow;
             UpdatedBy = updaterId;
         }
+
+        public void ToggleActive(bool active, Guid userId)
+        {
+            IsActive = active;
+            SetUpdated(userId);
+        }
+
+        public void SetUpdated(Guid userId)
+        {
+            UpdatedAt = DateTime.UtcNow;
+            UpdatedBy = userId;
+        }
     }
 }

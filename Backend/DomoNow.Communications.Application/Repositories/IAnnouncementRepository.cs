@@ -1,4 +1,6 @@
-﻿using DomoNow.Communications.Domain.Entities;
+﻿using DomoNow.Communications.Application.Models;
+using DomoNow.Communications.Application.UseCases.Announcement.Dtos;
+using DomoNow.Communications.Domain.Entities;
 
 namespace DomoNow.Communications.Application.Repositories
 {
@@ -7,6 +9,6 @@ namespace DomoNow.Communications.Application.Repositories
         Task Create(Announcement entity);
         Task Update(Announcement entity);
         Task<Announcement?> GetById(Guid id);
-        IQueryable<Announcement> Query();
+        Task<PaginationResponse<AnnouncementListItemDto>> GetPagedForUser(Guid? towerId, Guid? apartmentId, QueryParam filter, bool onlyActive = true);
     }
 }
