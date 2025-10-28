@@ -16,7 +16,7 @@ namespace DomoNow.Communications.Application.Settings
                 configuration.RegisterServicesFromAssemblyContaining<AssemblyReference>();
             });
 
-            services.AddScoped(typeof(IPipelineBehavior<,>), typeof(ValidationsBehaviors<,>));
+            services.AddScoped(typeof(IPipelineBehavior<,>), typeof(ValidationsBehavior<,>));
 
             services.AddValidatorsFromAssemblyContaining<AssemblyReference>();
             services.AddAutoMapper(option =>

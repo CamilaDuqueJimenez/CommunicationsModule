@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using DomoNow.Communications.Application.Commons;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Infrastructure;
 using Microsoft.AspNetCore.Mvc.ModelBinding;
 using System.Diagnostics;
@@ -66,7 +67,7 @@ namespace DomoNow.Communications.Presentation.Commons
                 pProblemDetails.Extensions["traceId"] = traceId;
             }
 
-            var errors = pHttpContext?.Items[Constant.Error] as List<string>;
+            var errors = pHttpContext?.Items[Constants.GENERAL_ERROR] as List<string>;
 
             if (errors is not null)
             {

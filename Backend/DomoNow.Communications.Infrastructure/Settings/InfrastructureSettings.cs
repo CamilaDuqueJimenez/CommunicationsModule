@@ -13,10 +13,15 @@ namespace DomoNow.Communications.Infrastructure.Settings
     {
         public static IServiceCollection Infrastructure(this IServiceCollection serviceCollection, IConfiguration configuration)
         {
-            serviceCollection.AddDbContext<DataBaseContext>(options => options.UseNpgsql(configuration.GetConnectionString("DataBaseConnection")));
+            serviceCollection.AddDbContext<DataBaseContext>(options => options.UseSqlServer(configuration.GetConnectionString("DataBaseConnection")));
 
-            serviceCollection.AddScoped<IUserRepository, UserRepository>();
-            serviceCollection.AddScoped<IUnitOfWork, UnitOfWork>();
+            serviceCollection.AddScoped<IUnitOfWork, UnitOfWork<DataBaseContext>>();
+            serviceCollection.AddScoped<IAuthRepository, UserRepository>();
+            serviceCollection.AddScoped<IRoleRepository, RoleRepository>();
+            serviceCollection.AddScoped<IAnnouncementRepository, AnnouncementRepository>();
+            serviceCollection.AddScoped<IReadConfirmationRepository, ReadConfirmationRepository>();
+            serviceCollection.AddScoped<IPassword, Password>();
+            serviceCollection.AddScoped<IJwtTokenGenerator, JwtTokenGenerator>();
 
             return serviceCollection;
         }

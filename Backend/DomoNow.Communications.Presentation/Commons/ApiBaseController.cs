@@ -1,4 +1,5 @@
-﻿using MediatR;
+﻿using DomoNow.Communications.Application.Commons;
+using MediatR;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.ModelBinding;
 
@@ -18,7 +19,7 @@ namespace DomoNow.Communications.Presentation.Commons
                 return Problem();
             }
 
-            HttpContext.Items[Constant.Error] = errors;
+            HttpContext.Items[Constants.GENERAL_ERROR] = errors;
 
             return ValidationProblem(errors);
         }
